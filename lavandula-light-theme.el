@@ -129,6 +129,7 @@
    `(org-link ((,class (:foreground ,fg :underline t))))
    `(org-meta-line ((,class (:foreground ,fg-dim))))
    `(org-tag ((,class (:foreground ,lavender :background ,bg-dim))))
+   `(org-todo ((,class (:foreground ,lavender-intense))))
    `(org-upcoming-deadline ((,class (:foreground ,fg :underline t (:style double) :background ,bg-dim))))
    `(org-upcoming-distant-deadline ((,class (:foreground ,fg :background ,bg-dim))))
    ;;; DIRED
@@ -138,7 +139,7 @@
    `(diredp-compressed-file-suffix ((,class (:inherit diredp-file-suffix))))
    `(diredp-date-time ((,class (:foreground ,fg-dim))))
    `(diredp-flag-mark ((,class (:background ,bg-dark))))
-   `(diredp-flag-mark-line ((,class (:background ,bg-dim))))
+   `(diredp-flag-mark-line ((,class (:background ,bg-dark))))
    `(diredp-deletion ((,class (:inherit diredp-flag-mark :strike-through t))))
    `(diredp-deletion-file-name ((,class (:inherit diredp-flag-mark-line :strike-through t))))
    `(diredp-omit-file-name ((,class (:foreground ,bg-dark))))
