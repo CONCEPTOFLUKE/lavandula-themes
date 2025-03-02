@@ -1,4 +1,4 @@
-;; LAVANDULA DARK THEME
+;; LAVANDULA LIGHT THEME
 
 ;; MIT License
 
@@ -22,24 +22,24 @@
 ;; OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 ;; SOFTWARE.
 
-(deftheme lavandula-dark
-  "Mostly monochromatic Emacs theme | Dark variant"
-  :background-mode 'dark)
+(deftheme lavandula-light
+  "Mostly monochromatic Emacs theme | Light variant"
+  :background-mode 'light)
 
 (let ((class '((class color) (min-colors 89)))
       ;; Backgrounds
-      (bg "#030008")
-      (bg-dim "#1e1f29")
-      (bg-dark "#585979")
+      (bg "#fbf9ff")
+      (bg-dim "#f3f1f7")
+      (bg-dark "#c7c8d6")
       ;; Foregrounds
-      (fg "#fbf9ff")
-      (fg-dim "#c7c8d6")
+      (fg "#030008")
+      (fg-dim "#585979")
       ;; Colours
       (lavender "#a2a3bb")
-      (lavender-intense "#9452ff"))
+      (lavender-intense "#5a00eb"))
 
   (custom-theme-set-faces
-   'lavandula-dark
+   'lavandula-light
    ;;; BASE
    `(default ((,class (:background ,bg :foreground ,fg))))
    `(bold ((,class (:weight semi-bold))))
@@ -66,20 +66,20 @@
    `(font-lock-regexp-face ((,class (:inherit default))))
    `(font-lock-regexp-grouping-backslash ((,class (:inherit default))))
    `(font-lock-regexp-grouping-construct ((,class (:inherit default))))
-   `(font-lock-string-face ((,class (:foreground ,fg-dim :weight dark))))
+   `(font-lock-string-face ((,class (:foreground ,fg-dim :weight light))))
    `(font-lock-type-face ((,class (:inherit default))))
    `(font-lock-variable-name-face ((,class (:inherit default))))
    `(font-lock-variable-use-face ((,class (:inherit default))))
    `(font-lock-warning-face ((,class (:bold t :foreground ,lavender-intense))))
-   ;;; HIGHDARKS
+   ;;; HIGHLIGHTS
    `(region ((,class (:background ,bg-dark :foreground ,fg))))
-   `(highdark ((,class (:background ,bg-dim :foreground ,fg))))
+   `(highlight ((,class (:background ,bg-dim :foreground ,fg))))
    `(hl-line ((,class (:background ,bg-dim))))
    `(fringe ((,class (:background ,bg))))
    `(cursor ((,class (:background ,lavender :foreground ,fg))))
    `(isearch ((,class (:bold t :background ,bg-dark))))
    `(isearch-fail ((,class (:background ,bg-dim))))
-   `(lazy-highdark ((,class (:background ,bg-dim))))
+   `(lazy-highlight ((,class (:background ,bg-dim))))
    `(show-paren-match ((,class (:bold t :background ,bg-dim))))
    `(show-paren-match-expression ((,class (:inherit show-paren-match))))
    `(show-paren-match-mismatch ((,class (:background ,bg-dark))))
@@ -111,7 +111,7 @@
    `(org-block-end-line ((,class (:inherit org-block-begin-line))))
    `(org-code ((,class (:foreground ,lavender-intense))))
    `(org-date ((,class (:foreground ,fg-dim))))
-   `(org-date-selected ((,class (:foreground fg :background ,bg-dim))))
+   `(org-date-selected ((,class (:foreground ,fg :background ,bg-dim))))
    `(org-done ((,class (:foreground ,lavender :background ,bg-dim))))
    `(org-drawer ((,class (:foreground ,fg-dim))))
    `(org-ellipsis ((,class (:inherit default))))
@@ -172,7 +172,7 @@
    `(shr-h6 ((,class (:inherit org-level-6))))
    `(shr-link ((,class (:bold t :underline t))))
    `(shr-mark ((,class (:inherit region))))
-   `(shr-selected-link ((,class (:inherit shr-link :bg-dark))))
+   `(shr-selected-link ((,class (:inherit shr-link ,bg-dark))))
    `(shr-strike-through ((,class (:strike-through t))))))
 
 ;;;autoload
@@ -180,5 +180,5 @@
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme 'lavandula-dark)
+(provide-theme 'lavandula-light)
       
